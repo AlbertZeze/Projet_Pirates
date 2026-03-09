@@ -26,14 +26,14 @@ public class Jeu {
 		//On rentre pour teste la condition
 		while(!finPartie) {
 			//On deplace le joueur1
-			deplacerJoueur(joueur1);
+			deplacerJoueur(joueur1,joueur2);
 			//On verifie la partie
 			finPartie=verifierFinPartie();
 			if (finPartie) {
 				break;
 			}
 		//Pareil pour le joueur2
-			deplacerJoueur(joueur2);
+			deplacerJoueur(joueur2,joueur1);
 			finPartie=verifierFinPartie();
 			
 			if (finPartie) {
@@ -43,7 +43,7 @@ public class Jeu {
 	}
 	
 	//Création de la méthode deplacerJoueur()
-	public void deplacerJoueur(Joueur joueur) {
+	public void deplacerJoueur(Joueur joueur, Joueur adversaire) {
 		//on lance le dé
 		int resultat = de.lancerDe();
 		System.out.println(joueur.getNom() + " lance le dé et obtient :" + resultat );
@@ -52,6 +52,12 @@ public class Jeu {
 		joueur.avancer(resultat);
 		System.out.println(joueur.getNom() + " est à la case : " + joueur.getPositionPlateau() );
 		
+		// récupérer la case du plateau
+	    Case caseActuelle = plateau.getCase(joueur.getPositionPlateau());
+
+	    // déclencher l'action de la case
+	    caseActuelle.declencherAction(joueur, adversaire);
+	
 	}
 	
 	//Création de la méthode verifierFinPartie()

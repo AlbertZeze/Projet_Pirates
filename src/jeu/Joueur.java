@@ -51,5 +51,7 @@ public void gagnerVie(int nbVie) {
 public void perdreVie(int nbVie) {
 	vie = vie - nbVie;
 }
-
+public int getVie() {
+	return vie;
+}
 }
