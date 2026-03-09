@@ -42,6 +42,14 @@ public boolean estVivant() {
 		return true;
 	}
 }
-	
+
+//Méthode gagnerVie
+public void gagnerVie(int nbVie) {
+	vie = vie + nbVie;
+}
+
+public void perdreVie(int nbVie) {
+	vie = vie - nbVie;
+}
 
 }
