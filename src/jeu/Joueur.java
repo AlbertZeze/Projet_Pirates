@@ -21,7 +21,8 @@ public void avancer(int nbCasesAvancer) {
 	//on avance si on a pas depassé la position maximale qui est 30.
 	positionPlateau = positionPlateau +  nbCasesAvancer;
 	if (positionPlateau > 30) {
-		positionPlateau=30;
+		int surplus=positionPlateau-30;
+		positionPlateau=30-surplus;
 	}
 }
 
