@@ -2,14 +2,14 @@ package jeu;
 
 public class Plateau {
 //Création des attributs
-	private int nbCases=30;
+	public static final int NB_CASES = 30;
 	private Case [] cases;
 
 //Création des constructueurs
 	public Plateau() {
-		 cases = new Case[nbCases];
+		 cases = new Case[NB_CASES];
 
-	        for (int i = 0; i < nbCases; i++) {
+	        for (int i = 0; i < NB_CASES; i++) {
 
 	            if (i == 5 || i == 15 || i == 25) {
 	                cases[i] = new CaseRouletteRusse(i + 1);

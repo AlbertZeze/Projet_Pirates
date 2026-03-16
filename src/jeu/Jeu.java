@@ -63,11 +63,11 @@ public class Jeu {
 	//Création de la méthode verifierFinPartie()
 	public boolean verifierFinPartie() {
 		//Si un des 2 joueurs remporte la victoire, la partie est terminée
-		if (joueur1.getPositionPlateau()==30) {
+		if (joueur1.getPositionPlateau()==Joueur.CASE_MAX) {
 			System.out.print(joueur1.getNom() + " remporte la victoire.");
 			return true;
 		}
-		if (joueur2.getPositionPlateau()==30) {
+		if (joueur2.getPositionPlateau()==Joueur.CASE_MAX) {
 			System.out.print(joueur2.getNom() + " remporte la victoire.");
 			return true;
 		}

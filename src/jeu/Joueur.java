@@ -7,7 +7,7 @@ private String nom;
 private int vie=5;
 private int positionPlateau=0;
 private Couleur couleurPion;
-private static final int caseMax=30;//type d'une constante
+public static final int CASE_MAX=30;//type d'une constante
 
 
 //Création des constructeurs
@@ -21,9 +21,9 @@ public Joueur(String nom, Couleur couleurPion) {
 public void avancer(int nbCasesAvancer) {
 	//on avance si on a pas depassé la position maximale qui est 30.
 	positionPlateau = positionPlateau +  nbCasesAvancer;
-	if (positionPlateau > caseMax) {
-		int surplus=positionPlateau-caseMax;
-		positionPlateau=caseMax-surplus;
+	if (positionPlateau > CASE_MAX) {
+		int surplus=positionPlateau-CASE_MAX;
+		positionPlateau=CASE_MAX-surplus;
 	}
 }
 
