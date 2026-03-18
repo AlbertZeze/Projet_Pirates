@@ -4,8 +4,8 @@ import java.util.Random;
 public class CaseVolvie extends Case{
 
 	//Constructeur de la case
-	public CaseVolvie(int numeroCase) {
-		super(numeroCase);
+	public CaseVolvie(int numeroCase,IAffichage affichage) {
+		super(numeroCase,affichage);
 	}
 	@Override
 	public void declencherAction(Joueur joueur1, Joueur joueur2) {
