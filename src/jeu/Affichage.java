@@ -2,8 +2,8 @@ package jeu;
 
 public class Affichage implements IAffichage {
 	@Override
-	public void afficherLancerDe(String nom, int resultat) {
-		System.out.println(nom + " lance le dé et obtient : " + resultat);
+	public void afficherLancerDe(String nom, int de1, int de2, int resultat) {
+		System.out.println(nom + " lance le dé 1: " + de1 +" et le dé 2 :" + de2 +" → total :" + resultat);
 	}
 	
 	@Override
@@ -31,8 +31,14 @@ public class Affichage implements IAffichage {
 		System.out.println("Vol de vie ! " + nom + " gagne 1 vie.");
 	}
 	
+	
 	@Override
 	public void afficherNombreDeVie(String nom, int vie) {
 		System.out.println(nom + " a maintenant " + vie + " vies.");
+	}
+	
+	@Override
+	public void afficherPause() {
+		System.out.println(" Appuyer sur Entrée pour continuer. ");
 	}
 }

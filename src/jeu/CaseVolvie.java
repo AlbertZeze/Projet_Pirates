@@ -3,7 +3,7 @@ import java.util.Random;
 
 public class CaseVolvie extends Case{
 
-	//Constructeur de la case
+	
 	public CaseVolvie(int numeroCase,IAffichage affichage) {
 		super(numeroCase,affichage);
 	}
