@@ -27,7 +27,7 @@ public class Affichage implements IAffichage {
 	}
 	
 	@Override
-	public void afficherVolvie(String nom) {
+	public void afficherCaseVolvie(String nom) {
 		System.out.println("Vol de vie ! " + nom + " gagne 1 vie.");
 	}
 	

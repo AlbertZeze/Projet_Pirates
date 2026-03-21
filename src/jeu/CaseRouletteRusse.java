@@ -15,6 +15,7 @@ public class CaseRouletteRusse extends Case {
 		
 		joueur1.avancer(nouvellePosition - joueur1.getPositionPlateau());
 		
-		System.out.print(joueur1.getPositionPlateau());
+		//System.out.print(joueur1.getPositionPlateau());
+		affichage.afficherCaseRusse(joueur1.getPositionPlateau());
 	}
 }

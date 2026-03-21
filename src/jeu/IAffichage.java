@@ -6,7 +6,7 @@ public interface IAffichage {
 	void afficherVerifierFinPartie(String nom);
 	void afficherCaseNormale();
 	void afficherCaseRusse(int nouvellePosition);
-	void afficherVolvie(String nom);
+	void afficherCaseVolvie(String nom);
 	void afficherNombreDeVie(String nom, int vie);
 	void afficherPause();
 }
